@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from '../Pages/Home';
-import About from '../Pages/About';
-import Dashboard from '../Pages/Dashboard';
+import Home from '../Home/index';
+import About from '../About/index';
 
-export default function BasicExample() {
+const Menu = () => {
+
   return (
 
     <Router>
@@ -21,9 +21,7 @@ export default function BasicExample() {
               <li>
                 <Link to="/about">About</Link>
               </li>
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
+             
             </ul>
           </div>
         </nav>
@@ -33,10 +31,11 @@ export default function BasicExample() {
           </Route>
           <Route path="/about" element={<About />}>
           </Route>
-          <Route path="/dashboard" element={<Dashboard />}>
-          </Route>
+          
         </Routes>
       </div>
     </Router>
   );
 }
+export default Menu;
+
